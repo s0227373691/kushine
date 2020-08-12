@@ -5,15 +5,22 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon index.js",
-    "build": "webpack --mode development"
+    "build": "webpack --mode development",
+    "buildW": "webpack --mode development --watch"
   },
   "author": "Elmer",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
-    "nodemon": "^2.0.4"
+    "nodemon": "^2.0.4",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
   },
   "devDependencies": {
+    "@babel/core": "^7.11.1",
+    "@babel/preset-env": "^7.11.0",
+    "@babel/preset-react": "^7.10.4",
+    "babel-loader": "^8.1.0",
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12"
   }

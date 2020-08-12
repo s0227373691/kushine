@@ -2,9 +2,8 @@ const express = require("express");
 
 const app = express();
 
-app.use(express.static("./dist"));
 app.get("/", (req, res) => {
-  console.log(__dirname + "/dist");
+  app.use("/dist", express.static("./dist"));
   res.sendFile(__dirname + "/index.html", (err) => {
     if (err) res.sendStatus(404);
   });
