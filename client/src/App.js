@@ -1,8 +1,10 @@
 import React from "react";
 
+import BtnList from "./containers/btnList";
+
 const App = () => (
   <div>
-    <h2>Hellow world</h2>
+    <BtnList />
   </div>
 );
 
