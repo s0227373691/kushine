@@ -2,6 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
+import device from "../config/device-size";
+
 // import Icon
 import IconUser from "../../public/icon/user";
 import IconShoppingCart from "../../public/icon/shopping-cart";
@@ -42,6 +44,10 @@ const BtnListContainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
+
+  @media ${device.tablet} {
+    display: none;
+  }
 `;
 
 const BtnList = styled.ul`
