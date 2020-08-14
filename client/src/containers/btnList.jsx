@@ -3,10 +3,10 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 // import Icon
-import IconUser from "../../public/icon/user.png";
-import IconShoppingCart from "../../public/icon/shopping-cart.png";
-import IconContact from "../../public/icon/contact.png";
-import IconSearch from "../../public/icon/search.png";
+import IconUser from "../../public/icon/user";
+import IconShoppingCart from "../../public/icon/shopping-cart";
+import IconContact from "../../public/icon/contact";
+import IconSearch from "../../public/icon/search";
 
 const btnList = () => {
   return (

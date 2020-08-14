@@ -6,7 +6,7 @@ module.exports = {
     path: path.resolve(__dirname, "./dist"),
   },
   resolve: {
-    extensions: [".js", ".jsx"], //字尾名自動補全
+    extensions: [".js", ".jsx", ".png"], //字尾名自動補全
   },
   module: {
     rules: [
