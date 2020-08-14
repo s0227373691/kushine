@@ -5,8 +5,18 @@ module.exports = {
     filename: "index.bundle.js",
     path: path.resolve(__dirname, "./dist"),
   },
+  resolve: {
+    extensions: [".js", ".jsx"], //字尾名自動補全
+  },
   module: {
     rules: [
+      // {
+      //   test: /\.(jsx)$/,
+      //   exclude: /(node_modules)/,
+      //   use: {
+      //     loader: ["babel-loader", "jsx-loader"],
+      //   },
+      // },
       {
         test: /\.(js)$/,
         exclude: /(node_modules)/,

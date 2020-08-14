@@ -3,6 +3,12 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "babal": {
+    "presets": [
+      "env",
+      "react"
+    ]
+  },
   "scripts": {
     "start": "nodemon index.js",
     "build": "webpack --mode development",
@@ -24,6 +30,7 @@
     "@babel/preset-react": "^7.10.4",
     "babel-loader": "^8.1.0",
     "image-webpack-loader": "^6.0.0",
+    "jsx-loader": "^0.13.2",
     "url-loader": "^4.1.0",
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12"

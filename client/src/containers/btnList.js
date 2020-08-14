@@ -10,29 +10,27 @@ import IconSearch from "../../public/icon/search.png";
 
 const btnList = () => {
   return (
-    <div>
-      <BtnListContainer>
-        <BtnList>
-          <BtnItem>
-            <Icon src={IconUser} alt="Loading..." />
-            <Link to="">註冊/登入會員</Link>
-          </BtnItem>
-          <BtnItem>
-            <Icon src={IconShoppingCart} alt="Loading..." />
-            <Link to="/shoppingCart">購物車</Link>
-          </BtnItem>
-          <BtnItem>
-            <Icon src={IconContact} alt="Loading..." />
-            <Link to="/contactUs">聯絡我們</Link>
-          </BtnItem>
-          <BtnItemSearch>
-            <Icon src={IconSearch} alt="Loading..." />
-            <input type="text" placeholder="找商品" />
-            <Link to="">搜尋</Link>
-          </BtnItemSearch>
-        </BtnList>
-      </BtnListContainer>
-    </div>
+    <BtnListContainer>
+      <BtnList>
+        <BtnItem>
+          <Icon src={IconUser} alt="Loading..." />
+          <Link to="">註冊/登入會員</Link>
+        </BtnItem>
+        <BtnItem>
+          <Icon src={IconShoppingCart} alt="Loading..." />
+          <Link to="/shoppingCart">購物車</Link>
+        </BtnItem>
+        <BtnItem>
+          <Icon src={IconContact} alt="Loading..." />
+          <Link to="/contactUs">聯絡我們</Link>
+        </BtnItem>
+        <BtnItemSearch>
+          <Icon src={IconSearch} alt="Loading..." />
+          <input type="text" placeholder="找商品" />
+          <Link to="">搜尋</Link>
+        </BtnItemSearch>
+      </BtnList>
+    </BtnListContainer>
   );
 };
 
