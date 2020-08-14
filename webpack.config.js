@@ -18,7 +18,7 @@ module.exports = {
       //   },
       // },
       {
-        test: /\.(js)$/,
+        test: /\.(js|jsx)$/,
         exclude: /(node_modules)/,
         use: {
           loader: "babel-loader",
@@ -32,9 +32,10 @@ module.exports = {
         use: [
           {
             loader: "url-loader",
-            options: { limit: 40000 },
+            options: {
+              limit: 8192,
+            },
           },
-          "image-webpack-loader",
         ],
       },
     ],
