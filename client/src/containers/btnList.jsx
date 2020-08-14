@@ -13,19 +13,19 @@ const btnList = () => {
     <BtnListContainer>
       <BtnList>
         <BtnItem>
-          <Icon src={IconUser} alt="Loading..." />
+          <Icon src={IconUser} />
           <Link to="">註冊/登入會員</Link>
         </BtnItem>
         <BtnItem>
-          <Icon src={IconShoppingCart} alt="Loading..." />
+          <Icon src={IconShoppingCart} />
           <Link to="/shoppingCart">購物車</Link>
         </BtnItem>
         <BtnItem>
-          <Icon src={IconContact} alt="Loading..." />
+          <Icon src={IconContact} />
           <Link to="/contactUs">聯絡我們</Link>
         </BtnItem>
         <BtnItemSearch>
-          <Icon src={IconSearch} alt="Loading..." />
+          <Icon src={IconSearch} />
           <input type="text" placeholder="找商品" />
           <Link to="">搜尋</Link>
         </BtnItemSearch>
