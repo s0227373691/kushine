@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 import device from "../config/device-size";
 
@@ -8,35 +8,55 @@ const NavMenu = () => {
   return (
     <MenuContainer>
       <Home>
-        <Link to="/">KUSHINE</Link>
+        <NavLink exact to="/">
+          KUSHINE
+        </NavLink>
       </Home>
       <MenuList>
         <MenuItem>
-          <Link to="/hot">HOT</Link>
+          <NavLink to="/hot" activeStyle={activeStyled}>
+            HOT
+          </NavLink>
         </MenuItem>
         <MenuItem>
-          <Link to="/newarrivals">NEW ARRIVALS</Link>
+          <NavLink to="/newarrivals" activeStyle={activeStyled}>
+            NEW ARRIVALS
+          </NavLink>
         </MenuItem>
         <MenuItem>
-          <Link to="/allproducts">ALL PRODUCTS</Link>
+          <NavLink to="/allproducts" activeStyle={activeStyled}>
+            ALL PRODUCTS
+          </NavLink>
         </MenuItem>
         <MenuItem>
-          <Link to="/mensstyle">MEN'S STYLE</Link>
+          <NavLink to="/mensstyle" activeStyle={activeStyled}>
+            MEN'S STYLE
+          </NavLink>
         </MenuItem>
         <MenuItem>
-          <Link to="/madamsstyle">MADAM'S STYLE</Link>
+          <NavLink to="/madamsstyle" activeStyle={activeStyled}>
+            MADAM'S STYLE
+          </NavLink>
         </MenuItem>
         <MenuItem>
-          <Link to="/couple">COUPLE</Link>
+          <NavLink to="/couple" activeStyle={activeStyled}>
+            COUPLE
+          </NavLink>
         </MenuItem>
         <MenuItem>
-          <Link to="/accessories">ACCESSORIES</Link>
+          <NavLink to="/accessories" activeStyle={activeStyled}>
+            ACCESSORIES
+          </NavLink>
         </MenuItem>
         <MenuItem>
-          <Link to="/newdiscount">NEW DISCOUNT</Link>
+          <NavLink to="/newdiscount" activeStyle={activeStyled}>
+            NEW DISCOUNT
+          </NavLink>
         </MenuItem>
         <MenuItem>
-          <Link to="/oddsizes">ODD SIZES</Link>
+          <NavLink to="/oddsizes" activeStyle={activeStyled}>
+            ODD SIZES
+          </NavLink>
         </MenuItem>
       </MenuList>
     </MenuContainer>
@@ -90,3 +110,8 @@ const MenuItem = styled.li`
     color: #333;
   }
 `;
+
+const activeStyled = {
+  fontWeight: "bold",
+  color: "red",
+};
