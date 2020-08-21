@@ -3,12 +3,14 @@ import styled from "styled-components";
 
 import BtnList from "./containers/btnList";
 import NavMenu from "./components/navMenu";
+import NavMenuMobile from "./components/navMenuMobile";
 
 const App = () => (
   <div>
     <BtnList />
     <Center>
       <NavMenu />
+      <NavMenuMobile />
     </Center>
   </div>
 );
