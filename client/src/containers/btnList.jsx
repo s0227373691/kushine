@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+import { BrowserRouter as Router, Link } from "react-router-dom";
 
 import device from "../config/device-size";
 
@@ -14,23 +14,25 @@ const btnList = () => {
   return (
     <BtnListContainer>
       <BtnList>
-        <BtnItem>
-          <Icon src={IconUser} />
-          <Link to="">註冊/登入會員</Link>
-        </BtnItem>
-        <BtnItem>
-          <Icon src={IconShoppingCart} />
-          <Link to="/shoppingCart">購物車</Link>
-        </BtnItem>
-        <BtnItem>
-          <Icon src={IconContact} />
-          <Link to="/contactUs">聯絡我們</Link>
-        </BtnItem>
-        <BtnItemSearch>
-          <Icon src={IconSearch} />
-          <input type="text" placeholder="找商品" />
-          <Link to="">搜尋</Link>
-        </BtnItemSearch>
+        <Router>
+          <BtnItem>
+            <Icon src={IconUser} />
+            <Link to="">註冊/登入會員</Link>
+          </BtnItem>
+          <BtnItem>
+            <Icon src={IconShoppingCart} />
+            <Link to="/shoppingCart">購物車</Link>
+          </BtnItem>
+          <BtnItem>
+            <Icon src={IconContact} />
+            <Link to="/contactUs">聯絡我們</Link>
+          </BtnItem>
+          <BtnItemSearch>
+            <Icon src={IconSearch} />
+            <input type="text" placeholder="找商品" />
+            <Link to="">搜尋</Link>
+          </BtnItemSearch>
+        </Router>
       </BtnList>
     </BtnListContainer>
   );

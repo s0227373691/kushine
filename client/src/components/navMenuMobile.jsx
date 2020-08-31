@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { NavLink } from "react-router-dom";
+import { BrowserRouter as Router, NavLink } from "react-router-dom";
 
 import device from "../config/device-size";
 import BackDrop from "./backDrop";
@@ -22,96 +22,99 @@ const NavMenuMobile = () => {
 
   return (
     <MenuContainer>
-      <Nav>
-        <NavLink to={location => location.pathname}>
-          <BtnMenuBar
-            src={IconMenuBar}
-            onClick={() => {
-              setDivMenuDisplay(!divMenuDisplay);
-              setDivSearchDisplay(false);
-            }}
-          />
-        </NavLink>
-        <NavLink to={location => location.pathname}>
-          <BtnSearch
-            src={IconSearch}
-            onClick={() => {
-              setDivSearchDisplay(!divSearchDisplay);
-              setDivMenuDisplay(false);
-            }}
-          />
-        </NavLink>
-        <Home onClick={handleBackDropClick}>
-          <NavLink exact to="/">
-            KUSHINE
+      <Router>
+        <Nav>
+          <NavLink to={location => location.pathname}>
+            <BtnMenuBar
+              src={IconMenuBar}
+              onClick={() => {
+                setDivMenuDisplay(!divMenuDisplay);
+                setDivSearchDisplay(false);
+              }}
+            />
           </NavLink>
-        </Home>
-        <NavLink to="/User">
-          <BtnUser src={IconUser} />
-        </NavLink>
-        <NavLink to="/shoppingCart">
-          <BtnShoppingCart src={IconShoppingCart} />
-        </NavLink>
-      </Nav>
-      <DivSearch style={{ display: divSearchDisplay ? "flex" : "none" }}>
-        <FormSearch>
-          <SubmitSearch src={IconSearch} />
-          <InputSearch type="text" placeholder="找商品" />
-        </FormSearch>
-      </DivSearch>
-      <DivMenu style={{ display: divMenuDisplay ? "block" : "none" }}>
-        <section>
-          <HeaderMenu>目錄</HeaderMenu>
-          <MenuList>
-            <MenuItem onClick={handleBackDropClick}>
-              <NavLink to="/hot">HOT</NavLink>
-            </MenuItem>
-            <MenuItem onClick={handleBackDropClick}>
-              <NavLink to="/newarrivals">NEW ARRIVALS</NavLink>
-            </MenuItem>
-            <MenuItem onClick={handleBackDropClick}>
-              <NavLink to="/allproducts">ALL PRODUCTS</NavLink>
-            </MenuItem>
-            <MenuItem onClick={handleBackDropClick}>
-              <NavLink to="/mensstyle">MEN'S STYLE</NavLink>
-            </MenuItem>
-            <MenuItem onClick={handleBackDropClick}>
-              <NavLink to="/madamsstyle">MADAM'S STYLE</NavLink>
-            </MenuItem>
-            <MenuItem onClick={handleBackDropClick}>
-              <NavLink to="/couple">COUPLE</NavLink>
-            </MenuItem>
-            <MenuItem onClick={handleBackDropClick}>
-              <NavLink to="/accessories">ACCESSORIES</NavLink>
-            </MenuItem>
-            <MenuItem onClick={handleBackDropClick}>
-              <NavLink to="/newdiscount">NEW DISCOUNT</NavLink>
-            </MenuItem>
-            <MenuItem onClick={handleBackDropClick}>
-              <NavLink to="/oddsizes">ODD SIZES</NavLink>
-            </MenuItem>
-          </MenuList>
-        </section>
-        <section>
-          <HeaderMenu>帳戶</HeaderMenu>
-          <MenuList>
-            <MenuItem>
-              <NavLink to={location => location.pathname}>Login</NavLink>
-            </MenuItem>
-            <MenuItem>
-              <NavLink to={location => location.pathname}>Register</NavLink>
-            </MenuItem>
-          </MenuList>
-        </section>
-        <section>
-          <HeaderMenu>其他</HeaderMenu>
-          <MenuList>
-            <MenuItem>
-              <NavLink to={location => location.pathname}>contact us</NavLink>
-            </MenuItem>
-          </MenuList>
-        </section>
-      </DivMenu>
+          <NavLink to={location => location.pathname}>
+            <BtnSearch
+              src={IconSearch}
+              onClick={() => {
+                setDivSearchDisplay(!divSearchDisplay);
+                setDivMenuDisplay(false);
+              }}
+            />
+          </NavLink>
+          <Home onClick={handleBackDropClick}>
+            <NavLink exact to="/">
+              KUSHINE
+            </NavLink>
+          </Home>
+          <NavLink to="/User">
+            <BtnUser src={IconUser} />
+          </NavLink>
+          <NavLink to="/shoppingCart">
+            <BtnShoppingCart src={IconShoppingCart} />
+          </NavLink>
+        </Nav>
+        <DivSearch style={{ display: divSearchDisplay ? "flex" : "none" }}>
+          <FormSearch>
+            <SubmitSearch src={IconSearch} />
+            <InputSearch type="text" placeholder="找商品" />
+          </FormSearch>
+        </DivSearch>
+        <DivMenu style={{ display: divMenuDisplay ? "block" : "none" }}>
+          <section>
+            <HeaderMenu>目錄</HeaderMenu>
+            <MenuList>
+              <MenuItem onClick={handleBackDropClick}>
+                <NavLink to="/hot">HOT</NavLink>
+              </MenuItem>
+              <MenuItem onClick={handleBackDropClick}>
+                <NavLink to="/newarrivals">NEW ARRIVALS</NavLink>
+              </MenuItem>
+              <MenuItem onClick={handleBackDropClick}>
+                <NavLink to="/allproducts">ALL PRODUCTS</NavLink>
+              </MenuItem>
+              <MenuItem onClick={handleBackDropClick}>
+                <NavLink to="/mensstyle">MEN'S STYLE</NavLink>
+              </MenuItem>
+              <MenuItem onClick={handleBackDropClick}>
+                <NavLink to="/madamsstyle">MADAM'S STYLE</NavLink>
+              </MenuItem>
+              <MenuItem onClick={handleBackDropClick}>
+                <NavLink to="/couple">COUPLE</NavLink>
+              </MenuItem>
+              <MenuItem onClick={handleBackDropClick}>
+                <NavLink to="/accessories">ACCESSORIES</NavLink>
+              </MenuItem>
+              <MenuItem onClick={handleBackDropClick}>
+                <NavLink to="/newdiscount">NEW DISCOUNT</NavLink>
+              </MenuItem>
+              <MenuItem onClick={handleBackDropClick}>
+                <NavLink to="/oddsizes">ODD SIZES</NavLink>
+              </MenuItem>
+            </MenuList>
+          </section>
+          <section>
+            <HeaderMenu>帳戶</HeaderMenu>
+            <MenuList>
+              <MenuItem>
+                <NavLink to={location => location.pathname}>Login</NavLink>
+              </MenuItem>
+              <MenuItem>
+                <NavLink to={location => location.pathname}>Register</NavLink>
+              </MenuItem>
+            </MenuList>
+          </section>
+          <section>
+            <HeaderMenu>其他</HeaderMenu>
+            <MenuList>
+              <MenuItem>
+                <NavLink to={location => location.pathname}>contact us</NavLink>
+              </MenuItem>
+            </MenuList>
+          </section>
+        </DivMenu>
+      </Router>
+
       <BackDrop
         show={divSearchDisplay || divMenuDisplay}
         clicked={handleBackDropClick}
