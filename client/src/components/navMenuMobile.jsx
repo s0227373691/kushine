@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { BrowserRouter as Router, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 import device from "../config/device-size";
 import BackDrop from "./backDrop";
@@ -23,7 +23,7 @@ const NavMenuMobile = () => {
   return (
     <MenuContainer>
       <Nav>
-        <NavLink to={location => location.pathname}>
+        <NavLink to={(location) => location.pathname}>
           <BtnMenuBar
             src={IconMenuBar}
             onClick={() => {
@@ -32,7 +32,7 @@ const NavMenuMobile = () => {
             }}
           />
         </NavLink>
-        <NavLink to={location => location.pathname}>
+        <NavLink to={(location) => location.pathname}>
           <BtnSearch
             src={IconSearch}
             onClick={() => {
@@ -96,10 +96,10 @@ const NavMenuMobile = () => {
           <HeaderMenu>帳戶</HeaderMenu>
           <MenuList>
             <MenuItem>
-              <NavLink to={location => location.pathname}>Login</NavLink>
+              <NavLink to={(location) => location.pathname}>Login</NavLink>
             </MenuItem>
             <MenuItem>
-              <NavLink to={location => location.pathname}>Register</NavLink>
+              <NavLink to={(location) => location.pathname}>Register</NavLink>
             </MenuItem>
           </MenuList>
         </section>
@@ -107,7 +107,7 @@ const NavMenuMobile = () => {
           <HeaderMenu>其他</HeaderMenu>
           <MenuList>
             <MenuItem>
-              <NavLink to={location => location.pathname}>contact us</NavLink>
+              <NavLink to={(location) => location.pathname}>contact us</NavLink>
             </MenuItem>
           </MenuList>
         </section>

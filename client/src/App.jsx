@@ -11,9 +11,9 @@ import Test2 from "./components/Test2";
 
 const App = () => (
   <div>
-    <BtnList />
-    <Center>
-      <Router>
+    <Router>
+      <BtnList />
+      <Center>
         <NavMenu />
         <NavMenuMobile />
         <Switch>
@@ -21,8 +21,8 @@ const App = () => (
           <Route path="/newarrivals" component={Test2} />
           <Route path="/allproducts" component={Test1} />
         </Switch>
-      </Router>
-    </Center>
+      </Center>
+    </Router>
   </div>
 );
 
