@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 
-const BackDrop = ({ show, clicked }) =>
-  show ? <BackDropDisplay onClick={clicked} /> : null;
+const BackDrop = ({ show, onClick }) =>
+  show ? <BackDropDisplay onClick={onClick} /> : null;
 
 export default BackDrop;
 

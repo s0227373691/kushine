@@ -114,7 +114,7 @@ const NavMenuMobile = () => {
       </DivMenu>
       <BackDrop
         show={divSearchDisplay || divMenuDisplay}
-        clicked={handleBackDropClick}
+        onClick={handleBackDropClick}
       />
     </MenuContainer>
   );
