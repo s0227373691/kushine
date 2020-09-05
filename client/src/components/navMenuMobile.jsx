@@ -15,7 +15,7 @@ const NavMenuMobile = () => {
   const [divSearchDisplay, setDivSearchDisplay] = useState(false);
   const [divMenuDisplay, setDivMenuDisplay] = useState(false);
 
-  function handleBackDropClick() {
+  function handleClickBackDrop() {
     setDivSearchDisplay(false);
     setDivMenuDisplay(false);
   }
@@ -41,7 +41,7 @@ const NavMenuMobile = () => {
             }}
           />
         </NavLink>
-        <Home onClick={handleBackDropClick}>
+        <Home onClick={handleClickBackDrop}>
           <NavLink exact to="/">
             KUSHINE
           </NavLink>
@@ -63,31 +63,31 @@ const NavMenuMobile = () => {
         <section>
           <HeaderMenu>目錄</HeaderMenu>
           <MenuList>
-            <MenuItem onClick={handleBackDropClick}>
+            <MenuItem onClick={handleClickBackDrop}>
               <NavLink to="/hot">HOT</NavLink>
             </MenuItem>
-            <MenuItem onClick={handleBackDropClick}>
+            <MenuItem onClick={handleClickBackDrop}>
               <NavLink to="/newarrivals">NEW ARRIVALS</NavLink>
             </MenuItem>
-            <MenuItem onClick={handleBackDropClick}>
+            <MenuItem onClick={handleClickBackDrop}>
               <NavLink to="/allproducts">ALL PRODUCTS</NavLink>
             </MenuItem>
-            <MenuItem onClick={handleBackDropClick}>
+            <MenuItem onClick={handleClickBackDrop}>
               <NavLink to="/mensstyle">MEN'S STYLE</NavLink>
             </MenuItem>
-            <MenuItem onClick={handleBackDropClick}>
+            <MenuItem onClick={handleClickBackDrop}>
               <NavLink to="/madamsstyle">MADAM'S STYLE</NavLink>
             </MenuItem>
-            <MenuItem onClick={handleBackDropClick}>
+            <MenuItem onClick={handleClickBackDrop}>
               <NavLink to="/couple">COUPLE</NavLink>
             </MenuItem>
-            <MenuItem onClick={handleBackDropClick}>
+            <MenuItem onClick={handleClickBackDrop}>
               <NavLink to="/accessories">ACCESSORIES</NavLink>
             </MenuItem>
-            <MenuItem onClick={handleBackDropClick}>
+            <MenuItem onClick={handleClickBackDrop}>
               <NavLink to="/newdiscount">NEW DISCOUNT</NavLink>
             </MenuItem>
-            <MenuItem onClick={handleBackDropClick}>
+            <MenuItem onClick={handleClickBackDrop}>
               <NavLink to="/oddsizes">ODD SIZES</NavLink>
             </MenuItem>
           </MenuList>
@@ -114,7 +114,7 @@ const NavMenuMobile = () => {
       </DivMenu>
       <BackDrop
         show={divSearchDisplay || divMenuDisplay}
-        onClick={handleBackDropClick}
+        onClose={handleClickBackDrop}
       />
     </MenuContainer>
   );
