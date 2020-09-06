@@ -4,7 +4,7 @@ const app = express();
 
 app.get("/", (req, res) => {
   app.use("/dist", express.static("./dist"));
-  res.sendFile(__dirname + "/index.html", (err) => {
+  res.sendFile(__dirname + "/server/index.html", (err) => {
     if (err) res.sendStatus(404);
   });
 });
