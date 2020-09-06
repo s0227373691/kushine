@@ -10,7 +10,10 @@
     ]
   },
   "scripts": {
-    "start": "webpack-dev-server --config ./webpack.config.js"
+    "start": "webpack-dev-server --config ./webpack.config.js",
+    "server": "nodemon index.js",
+    "build": "webpack --mode development",
+    "buildw": "webpack --mode development --watch"
   },
   "author": "Elmer",
   "license": "ISC",
